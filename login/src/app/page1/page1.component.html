@@ -4,15 +4,15 @@
     <form fxLayoutAlign="stretch" fxLayout="column" #f="ngForm" (ngSubmit)="onSubmit(f)">
         <mat-form-field>
             <mat-label>FirstName</mat-label>
-            <input required matInput id="txtname1" name="FirstName" type="text" ngModel #FirstName="ngModel">
+            <input required [(ngModel)]="name.name1" matInput id="txtname1" name="FirstName" type="text"  #FirstName="ngModel">
         </mat-form-field>
         <mat-form-field>
             <mat-label>MiddleName</mat-label>
-            <input  matInput id="txtname2" name="MiddleName" type="text" ngModel #MiddleName="ngModel">
+            <input [(ngModel)]="name.name2" matInput id="txtname2" name="MiddleName" type="text" #MiddleName="ngModel">
         </mat-form-field>
         <mat-form-field>
             <mat-label>LastName</mat-label>
-            <input required matInput id="txtname3" name="LastName" type="text" ngModel #LastName="ngModel">
+            <input [(ngModel)]="name.name3" required matInput id="txtname3" name="LastName" type="text" ngModel #LastName="ngModel">
         </mat-form-field>
         <button mat-raised-button 
                 (click)="Testing()"
@@ -20,7 +20,7 @@
                 
                 value="Submit" 
                 [disabled]="!f.valid" 
-                [ngStyle]="f.valid?{'background-color':'green'}:{'background-color':'red'}">Subit Name
+                [ngStyle]="f.valid?{'background-color':'green'}:{'background-color':'red'}">Submit Name
               </button>
 
               

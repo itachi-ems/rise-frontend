@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'login';
+  custom(event:any){
+    event.fullname=event.name1 + ' ' + event.name2 + ' ' + event.name3;
+  
+  }
 }

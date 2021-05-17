@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output, Type } from '@angular/core';
 import * as $ from "jquery";
+import { event } from 'jquery';
 
 @Component({
   selector: 'app-page1',
@@ -9,19 +10,29 @@ import * as $ from "jquery";
 export class Page1Component implements OnInit {
   color:string='white';
   constructor() { }
-
+  name1="";
+  name2="";
+  name3="";
+  name:any={
+    'name1':"",
+    'name2':"",
+    'name3':""
+  };
+   @Output() customevent=new EventEmitter();
   ngOnInit(): void {
   }
   Testing(){
-    var name1 = $("#txtname1").val();
-    var name2 = $("#txtname2").val();
-    var name3 = $("#txtname3").val();
-    alert("welcome : " + name1 + " " + name2 + " " + name3);
-  }
-  onSubmit(f:any):void {
-
+    
     
   }
+  onSubmit(f:any):void {
+    this.customevent.emit(this.name);
+    alert(JSON.stringify(this.name));
+    
+    
+  }
+  
+  
   Multiplestyles={
     'background':this.color,
     'border':'3px solid black',

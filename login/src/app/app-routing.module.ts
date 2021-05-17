@@ -5,7 +5,8 @@ import{Page1Component} from '../app/page1/page1.component'
 
 const routes: Routes = [
   {path:"",component:LoginFormComponent},
-  {path:"page1",component:Page1Component}
+  {path:"page1",component:Page1Component},
+  
 ];
 
 @NgModule({
