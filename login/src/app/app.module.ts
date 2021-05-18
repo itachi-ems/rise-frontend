@@ -13,13 +13,17 @@ import {MatCardModule} from '@angular/material/card';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { HttpClientModule } from '@angular/common/http';
 import { Page1Component } from './page1/page1.component';
-import { Page2Component } from './page2/page2.component'
+import { Page2Component } from './page2/page2.component';
+import { PipeComponent } from './pipe/pipe.component';
+import { NameDemoPipe } from './name-demo.pipe'
 @NgModule({
   declarations: [
     AppComponent,
     LoginFormComponent,
     Page1Component,
-    Page2Component
+    Page2Component,
+    PipeComponent,
+    NameDemoPipe
   ],
   imports: [
     BrowserModule,

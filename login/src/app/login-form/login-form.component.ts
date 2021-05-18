@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Pipe } from '@angular/core';
 import{ Router } from '@angular/router'
+import { pipe } from 'rxjs';
 
 @Component({
   selector: 'app-login-form',
@@ -14,9 +15,12 @@ export class LoginFormComponent implements OnInit {
   ngOnInit(): void {
   }
   color:string ="white";
-  gotopage(page1:string):void{
-    this.router.navigate([`${page1}`])
-  }
+   gotopage(page1:string):void{
+   this.router.navigate([`${page1}`])
+   }
+    // gotopage(Pipe:string):void{
+    //   this.router.navigate([`${pipe}`])
+    // }
   onSubmit(f:any):void {
 
     alert("Login successful");

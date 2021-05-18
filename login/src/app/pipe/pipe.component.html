@@ -1,0 +1,25 @@
+<div fxLayoutAlign="center center" fxFlexFill>
+<mat-card fxFlex="25" >
+    <form fxLayoutAlign="stretch" fxLayout="column">
+        <mat-form-field>
+            <mat-label>FirstName</mat-label>
+            <input required matInput [(ngModel)]="firstname" name="firstname" id="firstname">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>MiddleName</mat-label>
+            <input required matInput [(ngModel)]="middlename" name="middlename" id="middlename">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>LastName</mat-label>
+            <input required matInput [(ngModel)]="lastname" name="lastname" id="lastname">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput type="date" [(ngModel)]="calendar" name="calendar" id="calendar">
+        </mat-form-field>
+    </form>
+    <div>Fullname: {{firstname| nameDemo:middlename:lastname}}</div>
+    <div>     India: {{calendar | date :'dd/MM/yyyy'}}  </div>
+    <div>     Usa: {{calendar | date :'MM/dd/yyyy'}}</div>
+</mat-card>
+</div>
+
